@@ -4,21 +4,101 @@
   <meta charset="utf-8">
   <title>Dane Blackmon</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    /* simple, self-contained styles so you only paste this one file */
+    :root {
+      --max-width: 900px;
+      --content-width: 720px;
+      --gap-large: 20px;   /* controls double-line spacing for top content */
+      --gap-small: 12px;   /* spacing for items in the left block */
+    }
+    html,body{height:100%;margin:0;}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      min-height:100vh;
+      background:#fff;
+      color:#111;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max-width);
+      padding:5vh 20px;
+      box-sizing:border-box;
+      margin:0 auto;
+      text-align:center; /* top content centered */
+    }
+
+    h1{
+      font-size:40px;
+      margin:0 0 8px 0;
+      font-weight:700;
+    }
+
+    /* top paragraphs — each paragraph gets larger bottom spacing (double-line feel) */
+    .top p{
+      margin:0 0 var(--gap-large) 0;
+      line-height:1.5;
+      font-size:15.5px;
+    }
+
+    /* bottom block (left aligned) */
+    .left-block{
+      max-width:var(--content-width);
+      margin: calc(var(--gap-large)) auto 0; /* space above block */
+      text-align:left; /* THIS left aligns the bottom part */
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    .left-block h3{
+      margin:0 0 10px 0;
+      font-size:16px;
+      font-weight:600;
+    }
+
+    .left-block p{
+      margin:0 0 var(--gap-small) 0; /* spacing between lines */
+    }
+
+    /* small screen tweaks */
+    @media (max-width:520px){
+      h1{font-size:28px;}
+      .left-block, .top p { font-size:14px; }
+      :root{ --content-width: 92%; }
+    }
+  </style>
 </head>
-<body style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;">
-  <div style="text-align:center;max-width:720px;padding:24px;">
-    <h1 style="margin:0 0 8px;">Dane Blackmon.</h1>
-    <p style="margin:0;">Building the future one project at a time.<br>
-    
-    2025: Started Soarify - A marketing agency working with the top Info / Coaching brands in the online space.<br>
-    
-    Future Projects:<br>
-    Software (Infofunnels.AI) - An AI powered funnel builder platform competing with ClickFunnels, GoHighLevel, Kajabi, & More.<br>
-    High-End E-Bikes - Making fast electric bikes for everyone. Competing with brands like Stark Varg, Surron, Talaria, E-Ride Pro, Ventus, Electro & Co, Altis Sigma, & More.<br>
-    Animal Shelters - 100% Non-Profit Organization helping animals in need become healthy, cared for & find loving homes.<br>
-    Largest Retail Pet Sotre Chain In The USA - Taking over big box stores like PetSmart, PetCo, & More.<br>
-    Help physically and mentally disabled children live happy & healthy lives.<br>
-    Help families with weather destroyed houses build new ones & support them in the process.<br></p>
+<body>
+  <div class="wrap">
+    <h1>Dane Blackmon.</h1>
+
+    <div class="top">
+      <p>Building the future one project at a time.</p>
+
+      <p>2025: Started Soarify - A marketing agency working with the top Info / Coaching brands in the online space.</p>
+
+      <p>Future Projects:</p>
+    </div>
+
+    <div class="left-block">
+      <p><strong>Software</strong> - An AI powered funnel builder platform competing with ClickFunnels, GoHighLevel, Kajabi, &amp; More.</p>
+
+      <p><strong>High-End E-Bikes</strong> - Making fast electric bikes for everyone. Competing with brands like Stark Varg, Surron, Talaria, E-Ride Pro, Ventus, Electro &amp; Co, Altis Sigma, &amp; More.</p>
+
+      <p><strong>Animal Shelters</strong> - 100% Non-Profit Organization helping animals in need become healthy, cared for &amp; find loving homes.</p>
+
+      <p><strong>Largest Retail Pet Store Chain In The USA</strong> - Taking over big box stores like PetSmart, PetCo, &amp; More.</p>
+
+      <p>Help physically and mentally disabled children live happy &amp; healthy lives.</p>
+
+      <p>Help families with weather-destroyed houses build new ones &amp; support them in the process.</p>
+    </div>
   </div>
 </body>
 </html>
