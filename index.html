@@ -11,60 +11,68 @@
       --gap-large:20px;
       --gap-small:12px;
     }
+
+    /* full-page center */
     html,body{height:100%;margin:0;}
     body{
-      font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,Helvetica;
       display:flex;
-      align-items:flex-start;
-      justify-content:center;
+      align-items:center;      /* vertical center */
+      justify-content:center;  /* horizontal center */
       min-height:100vh;
       background:#fff;
       color:#111;
     }
+
+    /* the centered block */
     .wrap{
       width:100%;
       max-width:var(--max-width);
-      padding:5vh 20px;
+      padding:20px;
       box-sizing:border-box;
       margin:0 auto;
-      text-align:center; /* default center for everything */
     }
+
+    /* Title area (centered) */
     h1{
-      font-size:40px;
+      font-size:48px;
       margin:0 0 8px 0;
-      font-weight:400; /* no bold */
+      font-weight:800; /* heavier/bold */
+      text-align:center;
     }
+
     .top p{
       margin:0 0 var(--gap-large) 0;
       line-height:1.5;
-      font-size:15.5px;
-      text-align:center; /* explicit */
+      font-size:16px;
+      text-align:center; /* keep the subheading centered */
       font-weight:400;
     }
 
-    /* These two lines will be left-aligned text but centered as a block */
-    .left-line{
+    /* All content below the subheading — left aligned text,
+       but the block itself is centered via margin auto */
+    .content-left{
       max-width:var(--content-width);
-      margin: 0 auto var(--gap-large)  auto; /* keeps the block centered horizontally */
+      margin: 0 auto var(--gap-large) auto; /* centers the block horizontally */
       text-align:left;   /* left-align the text within the block */
       line-height:1.5;
       font-size:15px;
       font-weight:400;
     }
 
-    /* the bottom project list stays centered as a block, text centered */
+    /* projects is part of the left-aligned content; use same class */
     .projects{
       margin:0 auto;
       max-width:var(--content-width);
-      text-align:center;
+      text-align:left; /* left aligned */
       line-height:1.5;
       font-size:15px;
       margin-top:0;
     }
 
     @media (max-width:520px){
-      h1{font-size:28px;}
-      .left-line, .top p, .projects { font-size:14px; }
+      h1{font-size:32px;}
+      .content-left, .top p, .projects { font-size:14px; }
       :root{ --content-width:92%; }
     }
   </style>
@@ -77,14 +85,14 @@
       <p>Building the future one project at a time.</p>
     </div>
 
-    <!-- LEFT-ALIGNED LINES (centered block but text left-aligned) -->
-    <div class="left-line">2025: Started Soarify - A marketing agency working with the top Info / Coaching brands in the online space.</div>
+    <!-- Left-aligned items (each kept in the centered block) -->
+    <div class="content-left">2025: Started Soarify - A marketing agency working with the top Info / Coaching brands in the online space.</div>
 
-    <div class="left-line">Future Projects:</div>
+    <div class="content-left">Future Projects:</div>
 
-    <!-- Rest of content stays centered -->
+    <!-- Rest of content — left aligned inside a centered block -->
     <div class="projects">
-      <p>Software (Infounnals.AI) - An AI powered funnel builder platform competing with ClickFunnels, GoHighLevel, Kajabi, &amp; More.</p>
+      <p>Software - An AI powered funnel builder platform competing with ClickFunnels, GoHighLevel, Kajabi, &amp; More.</p>
 
       <p>High-End E-Bikes - Making fast electric bikes for everyone. Competing with brands like Stark Varg, Surron, Talaria, E-Ride Pro, Ventus, Electro &amp; Co, Altis Sigma, &amp; More.</p>
 
