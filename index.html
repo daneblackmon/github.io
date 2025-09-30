@@ -5,18 +5,15 @@
   <title>Dane Blackmon</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    /* simple, self-contained styles so you only paste this one file */
-    :root {
-      --max-width: 900px;
-      --content-width: 720px;
-      --gap-large: 20px;   /* controls double-line spacing for top content */
-      --gap-small: 12px;   /* spacing for items in the left block */
+    :root{
+      --max-width:900px;
+      --content-width:720px;
+      --gap-large:20px;
+      --gap-small:12px;
     }
     html,body{height:100%;margin:0;}
     body{
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial;
       display:flex;
       align-items:flex-start;
       justify-content:center;
@@ -24,53 +21,51 @@
       background:#fff;
       color:#111;
     }
-
     .wrap{
       width:100%;
       max-width:var(--max-width);
       padding:5vh 20px;
       box-sizing:border-box;
       margin:0 auto;
-      text-align:center; /* top content centered */
+      text-align:center; /* default center for everything */
     }
-
     h1{
       font-size:40px;
       margin:0 0 8px 0;
-      font-weight:700;
+      font-weight:400; /* no bold */
     }
-
-    /* top paragraphs — each paragraph gets larger bottom spacing (double-line feel) */
     .top p{
       margin:0 0 var(--gap-large) 0;
       line-height:1.5;
       font-size:15.5px;
+      text-align:center; /* explicit */
+      font-weight:400;
     }
 
-    /* bottom block (left aligned) */
-    .left-block{
+    /* These two lines will be left-aligned text but centered as a block */
+    .left-line{
       max-width:var(--content-width);
-      margin: calc(var(--gap-large)) auto 0; /* space above block */
-      text-align:left; /* THIS left aligns the bottom part */
-      font-size:15px;
+      margin: 0 auto var(--gap-large)  auto; /* keeps the block centered horizontally */
+      text-align:left;   /* left-align the text within the block */
       line-height:1.5;
+      font-size:15px;
+      font-weight:400;
     }
 
-    .left-block h3{
-      margin:0 0 10px 0;
-      font-size:16px;
-      font-weight:600;
+    /* the bottom project list stays centered as a block, text centered */
+    .projects{
+      margin:0 auto;
+      max-width:var(--content-width);
+      text-align:center;
+      line-height:1.5;
+      font-size:15px;
+      margin-top:0;
     }
 
-    .left-block p{
-      margin:0 0 var(--gap-small) 0; /* spacing between lines */
-    }
-
-    /* small screen tweaks */
     @media (max-width:520px){
       h1{font-size:28px;}
-      .left-block, .top p { font-size:14px; }
-      :root{ --content-width: 92%; }
+      .left-line, .top p, .projects { font-size:14px; }
+      :root{ --content-width:92%; }
     }
   </style>
 </head>
@@ -80,20 +75,22 @@
 
     <div class="top">
       <p>Building the future one project at a time.</p>
-
-      <p>2025: Started Soarify - A marketing agency working with the top Info / Coaching brands in the online space.</p>
-
-      <p>Future Projects:</p>
     </div>
 
-    <div class="left-block">
-      <p><strong>Software</strong> - An AI powered funnel builder platform competing with ClickFunnels, GoHighLevel, Kajabi, &amp; More.</p>
+    <!-- LEFT-ALIGNED LINES (centered block but text left-aligned) -->
+    <div class="left-line">2025: Started Soarify - A marketing agency working with the top Info / Coaching brands in the online space.</div>
 
-      <p><strong>High-End E-Bikes</strong> - Making fast electric bikes for everyone. Competing with brands like Stark Varg, Surron, Talaria, E-Ride Pro, Ventus, Electro &amp; Co, Altis Sigma, &amp; More.</p>
+    <div class="left-line">Future Projects:</div>
 
-      <p><strong>Animal Shelters</strong> - 100% Non-Profit Organization helping animals in need become healthy, cared for &amp; find loving homes.</p>
+    <!-- Rest of content stays centered -->
+    <div class="projects">
+      <p>Software (Infounnals.AI) - An AI powered funnel builder platform competing with ClickFunnels, GoHighLevel, Kajabi, &amp; More.</p>
 
-      <p><strong>Largest Retail Pet Store Chain In The USA</strong> - Taking over big box stores like PetSmart, PetCo, &amp; More.</p>
+      <p>High-End E-Bikes - Making fast electric bikes for everyone. Competing with brands like Stark Varg, Surron, Talaria, E-Ride Pro, Ventus, Electro &amp; Co, Altis Sigma, &amp; More.</p>
+
+      <p>Animal Shelters - 100% Non-Profit Organization helping animals in need become healthy, cared for &amp; find loving homes.</p>
+
+      <p>Largest Retail Pet Store Chain In The USA - Taking over big box stores like PetSmart, PetCo, &amp; More.</p>
 
       <p>Help physically and mentally disabled children live happy &amp; healthy lives.</p>
 
